@@ -1,6 +1,6 @@
 :root {
   --background-color-dark: #121212;
-  --background-color-lighter: #1e1e1e;
+  --background-color-lighter: #252525;
   --error-color: #cf6679;
   --success-color: #03dac6;
   --main-text-color: #ffffff70;
@@ -48,9 +48,20 @@ input {
   font-size: 1.2em;
   padding: 0;
   padding-left: 12px;
+  margin-top: 5px;
   background-color: var(--background-color-dark);
   border: none;
   border-radius: 5px;
+}
+
+input:invalid,
+.invalid {
+  border: 0.5px solid var(--error-color);
+}
+
+.active {
+  float: right;
+  color: var(--error-color);
 }
 
 input:focus-visible {

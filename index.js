@@ -78,9 +78,11 @@ const form = (() => {
     pass2.addEventListener('input', function (e) {
       const pass1 = document.getElementById('pass').value;
       if (pass2.value === pass1) {
+        pass2.classList.remove('invalid');
         password2span.textContent = '';
         password2span.className = 'error';
       } else {
+        pass2.classList.add('invalid');
         showError(pass2, password2span, 'Passwords need to match');
       }
     });
